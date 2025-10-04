@@ -21,10 +21,10 @@ const Hero = () => {
           {/* Left side - Content */}
           <div className="space-y-6 animate-slide-in-left">
             <div className="space-y-2">
-              <p className="text-muted-foreground text-sm tracking-widest uppercase">Hi, I'm Abhinav Yadav</p>
+              <p className="text-muted-foreground text-sm tracking-widest uppercase">Hi, I'm</p>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-tight">
-                Data Analyst
-                <span className="block text-gradient">& Problem Solver</span>
+                Abhinav Yadav
+                <span className="block text-gradient">Data Analyst</span>
               </h1>
             </div>
             
