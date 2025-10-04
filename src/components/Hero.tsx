@@ -24,8 +24,8 @@ const Hero = () => {
               <p className="text-muted-foreground text-sm tracking-widest uppercase">Hi, I'm</p>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-tight">
                 Abhinav Yadav
-                <span className="block text-gradient">Data Analyst</span>
               </h1>
+              <p className="text-2xl md:text-3xl font-semibold text-gradient">A Data Analyst</p>
             </div>
             
             <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
