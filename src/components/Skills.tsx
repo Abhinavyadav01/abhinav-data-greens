@@ -23,8 +23,12 @@ const Skills = () => {
     "MySQL",
     "IntelliJ IDEA",
     "Streamlit",
-    "Excel",
-    "Power Query",
+    "Jupyter Notebook",
+    "Google Colab",
+    "Tableau",
+    "MS Word",
+    "MS Excel",
+    "Power BI",
     "DAX"
   ];
 

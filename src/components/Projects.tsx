@@ -17,8 +17,8 @@ const Projects = () => {
         "Location analysis with integrated maps",
         "Simplified counseling decision-making"
       ],
-      liveLink: "#",
-      githubLink: "#"
+      liveLink: "https://nkjcpjfzpjhaxlf7nzcsam.streamlit.app",
+      githubLink: "https://github.com/Abhinavyadav01/CollegeAnalyser-"
     },
     {
       title: "Zepto Sales Dashboard",
@@ -32,7 +32,7 @@ const Projects = () => {
         "Interactive filters for deep-dive analysis"
       ],
       liveLink: "#",
-      githubLink: "#"
+      githubLink: "https://github.com/Abhinavyadav01/Zepto_Sales"
     }
   ];
 

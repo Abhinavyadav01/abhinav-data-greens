@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -13,29 +14,61 @@ const Contact = () => {
     email: "",
     message: ""
   });
+  const [suggestion, setSuggestion] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
-    setFormData({ name: "", email: "", message: "" });
+
+    try {
+      await emailjs.send(
+        "service_fgr2vk7",
+        "template_if8mr1q",
+        formData,
+        "RuddJ7m653xUJlXxF"
+      );
+
+      toast({
+        title: "Message sent!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      });
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      toast({
+        title: "Error sending message",
+        description: "Please try again later.",
+      });
+      console.error("EmailJS Error:", error);
+    }
   };
 
-  const handleSuggestionSubmit = (e: React.FormEvent) => {
+  const handleSuggestionSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Suggestion received!",
-      description: "Thank you for your feedback.",
-    });
+    try {
+      await emailjs.send(
+        "service_fgr2vk7",
+        "template_if8mr1q",
+        { message: suggestion },
+        "RuddJ7m653xUJlXxF"
+      );
+      toast({
+        title: "Suggestion received!",
+        description: "Thank you for your feedback.",
+      });
+      setSuggestion("");
+    } catch (error) {
+        toast({
+          title: "Error sending suggestion",
+          description: "Please try again later.",
+        });
+        console.error("EmailJS Error:", error);
+      }
   };
 
   const contactLinks = [
-    { icon: Mail, label: "Email", value: "abhinav@example.com", href: "mailto:abhinav@example.com" },
-    { icon: Linkedin, label: "LinkedIn", value: "/abhinavyadav", href: "https://linkedin.com/in/abhinavyadav" },
-    { icon: Github, label: "GitHub", value: "/abhinavyadav", href: "https://github.com/abhinavyadav" },
-    { icon: Instagram, label: "Instagram", value: "@abhinavyadav", href: "https://instagram.com/abhinavyadav" },
+    { icon: Mail, label: "Email", value: "abhinav.codes01@gmail.com", href: "mailto:abhinav.codes01@gmail.com" },
+    { icon: Linkedin, label: "LinkedIn", value: "/abhinavyadav23", href: "https://linkedin.com/in/abhinavyadav23" },
+    { icon: Github, label: "GitHub", value: "/abhinavyadav01", href: "https://github.com/abhinavyadav01" },
+    { icon: Instagram, label: "Instagram", value: "_abhinav.0523", href: "https://instagram.com/_abhinav.0523" },
   ];
 
   return (
