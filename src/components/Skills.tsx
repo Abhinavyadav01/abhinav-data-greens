@@ -98,7 +98,7 @@ const Skills = () => {
                     </div>
                     <Progress 
                       value={visibleSkills.has(index) ? skill.level : 0} 
-                      className="h-2 transition-all duration-1000 ease-out" 
+                      className="h-2 transition-all duration-[1500ms] ease-out" 
                     />
                   </div>
                 </div>
@@ -141,7 +141,7 @@ const Skills = () => {
                   </div>
                   <Progress 
                     value={visibleSkills.has(softIndex) ? skill.level : 0} 
-                    className="h-2 transition-all duration-1000 ease-out" 
+                    className="h-2 transition-all duration-[1500ms] ease-out" 
                   />
                 </div>
               );
