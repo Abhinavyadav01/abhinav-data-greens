@@ -37,23 +37,23 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-24 px-4 bg-secondary/50">
+    <section id="projects" className="py-16 md:py-24 px-4 bg-secondary/50">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-12 md:mb-16 animate-fade-in">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4">
             Featured <span className="text-gradient">Projects</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto px-4">
             Transforming complex problems into elegant data-driven solutions
           </p>
         </div>
 
-        <div className="space-y-12">
+        <div className="space-y-8 md:space-y-12">
           {projects.map((project, index) => (
             <Card key={index} className="overflow-hidden bg-card border-border card-glow">
               <div className="grid md:grid-cols-2 gap-0">
                 {/* Image */}
-                <div className="relative h-64 md:h-auto overflow-hidden bg-muted">
+                <div className="relative h-48 sm:h-64 md:h-auto overflow-hidden bg-muted">
                   <img 
                     src={project.image} 
                     alt={`${project.title} preview`}
@@ -63,21 +63,21 @@ const Projects = () => {
                 </div>
 
                 {/* Content */}
-                <div className="p-8 flex flex-col justify-between">
+                <div className="p-6 md:p-8 flex flex-col justify-between">
                   <div>
-                    <h3 className="text-2xl md:text-3xl font-bold mb-3">{project.title}</h3>
-                    <p className="text-muted-foreground mb-6 leading-relaxed">
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3">{project.title}</h3>
+                    <p className="text-sm md:text-base text-muted-foreground mb-4 md:mb-6 leading-relaxed">
                       {project.description}
                     </p>
 
                     {/* Key Highlights */}
-                    <div className="mb-6">
-                      <h4 className="font-semibold text-sm uppercase tracking-wide text-primary mb-3">
+                    <div className="mb-4 md:mb-6">
+                      <h4 className="font-semibold text-xs md:text-sm uppercase tracking-wide text-primary mb-2 md:mb-3">
                         Key Highlights
                       </h4>
-                      <ul className="space-y-2">
+                      <ul className="space-y-1.5 md:space-y-2">
                         {project.highlights.map((highlight, i) => (
-                          <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                          <li key={i} className="flex items-start gap-2 text-xs md:text-sm text-muted-foreground">
                             <span className="text-primary mt-1">•</span>
                             <span>{highlight}</span>
                           </li>
@@ -86,7 +86,7 @@ const Projects = () => {
                     </div>
 
                     {/* Technologies */}
-                    <div className="flex flex-wrap gap-2 mb-6">
+                    <div className="flex flex-wrap gap-1.5 md:gap-2 mb-4 md:mb-6">
                       {project.technologies.map((tech, i) => (
                         <span 
                           key={i}
@@ -99,10 +99,10 @@ const Projects = () => {
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex gap-3">
+                  <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
                     <Button 
                       variant="outline" 
-                      className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                      className="border-primary text-primary hover:bg-primary hover:text-primary-foreground w-full sm:w-auto"
                       asChild
                     >
                       <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
@@ -112,7 +112,7 @@ const Projects = () => {
                     </Button>
                     <Button 
                       variant="ghost"
-                      className="hover:bg-secondary"
+                      className="hover:bg-secondary w-full sm:w-auto"
                       asChild
                     >
                       <a href={project.githubLink} target="_blank" rel="noopener noreferrer">

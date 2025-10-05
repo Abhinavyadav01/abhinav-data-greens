@@ -9,7 +9,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 py-20">
+    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 py-20 md:py-24">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float" />
@@ -17,36 +17,36 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto max-w-6xl relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left side - Content */}
-          <div className="space-y-6 animate-slide-in-left">
+          <div className="space-y-4 md:space-y-6 animate-slide-in-left text-center md:text-left">
             <div className="space-y-2">
               <p className="text-muted-foreground text-sm tracking-widest uppercase">Hi, I'm</p>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight">
                 Abhinav Yadav
               </h1>
-              <p className="text-2xl md:text-3xl font-bold text-gradient overflow-hidden whitespace-nowrap animate-typing">
+              <p className="text-xl sm:text-2xl md:text-3xl font-bold text-gradient">
                 A Data Analyst
               </p>
             </div>
             
-            <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
+            <p className="text-base md:text-lg text-muted-foreground max-w-lg leading-relaxed mx-auto md:mx-0">
               Leveraging Python, SQL, and Power BI to transform complex data into clear, actionable business intelligence. Driving insights with precision and innovation in Data Science.
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-wrap gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-2 md:pt-4 justify-center md:justify-start">
               <Button 
                 size="lg" 
                 onClick={() => scrollToSection('projects')}
-                className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-8"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-6 sm:px-8 w-full sm:w-auto"
               >
                 View Projects
               </Button>
               <Button 
                 size="lg" 
                 variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-8"
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-6 sm:px-8 w-full sm:w-auto"
                 onClick={() => {
                   const link = document.createElement('a');
                   link.href = '/resume.pdf'; 
@@ -64,7 +64,7 @@ const Hero = () => {
             </div>
 
             {/* Social Links */}
-            <div className="flex gap-4 pt-4">
+            <div className="flex gap-4 pt-2 md:pt-4 justify-center md:justify-start">
               <a href="https://github.com/abhinavyadav01" target="_blank" rel="noopener noreferrer" 
                 className="text-muted-foreground hover:text-primary transition-colors">
                 <Github className="h-6 w-6" />
@@ -85,8 +85,8 @@ const Hero = () => {
           </div>
 
           {/* Right side - Profile Image */}
-          <div className="relative animate-fade-in">
-            <div className="relative w-full max-w-md mx-auto">
+          <div className="relative animate-fade-in order-first md:order-last">
+            <div className="relative w-64 sm:w-80 md:w-full max-w-md mx-auto">
               {/* Glow effect */}
               <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl animate-glow" />
               
