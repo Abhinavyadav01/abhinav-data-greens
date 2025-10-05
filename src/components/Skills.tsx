@@ -1,8 +1,34 @@
 import { Code2, Database, BarChart3, Brain, MessageSquare, Users } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
+import { useEffect, useRef, useState } from "react";
 
 const Skills = () => {
+  const [visibleSkills, setVisibleSkills] = useState<Set<number>>(new Set());
+  const techSkillsRef = useRef<HTMLDivElement>(null);
+  const softSkillsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = parseInt(entry.target.getAttribute("data-index") || "0");
+            setVisibleSkills((prev) => new Set(prev).add(index));
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    const techElements = techSkillsRef.current?.querySelectorAll("[data-index]");
+    const softElements = softSkillsRef.current?.querySelectorAll("[data-index]");
+
+    techElements?.forEach((el) => observer.observe(el));
+    softElements?.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
   const getSkillLabel = (level) => {
     if (level >= 90) return "Expert";
     if (level >= 80) return "Advanced";
@@ -51,32 +77,29 @@ const Skills = () => {
         </div>
 
         {/* Technical Skills */}
-        <div className="mb-16">
+        <div className="mb-16" ref={techSkillsRef}>
           <h3 className="text-2xl font-bold mb-8 flex items-center gap-2">
             <Code2 className="h-6 w-6 text-primary" />
             Technical Stack
           </h3>
           <div className="grid md:grid-cols-2 gap-6">
             {technicalSkills.map((skill, index) => (
-              <Card key={index} className="p-6 bg-card border-border card-glow">
+              <Card key={index} className="p-6 bg-card border-border card-glow" data-index={index}>
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                     <skill.icon className="h-6 w-6 text-primary" />
                   </div>
                   <div className="flex-1">
-                    {/* <h4 className="font-semibold mb-2">{skill.name}</h4>
-                    <Progress value={skill.level} className="h-2" />
-                    <p className="text-sm text-primary mt-1 font-medium">{skill.level}%
-                      {getSkillLabel(skill.level)}
-                    </p>  */}
                     <div className="flex justify-between items-center mb-2">
                       <h4 className="font-semibold">{skill.name}</h4>
                       <span className="text-sm text-primary font-medium">
                         {getSkillLabel(skill.level)}
                       </span>
                     </div>
-                    <Progress value={skill.level} className="h-2" />
-
+                    <Progress 
+                      value={visibleSkills.has(index) ? skill.level : 0} 
+                      className="h-2 transition-all duration-1000 ease-out" 
+                    />
                   </div>
                 </div>
               </Card>
@@ -100,23 +123,29 @@ const Skills = () => {
         </div>
 
         {/* Soft Skills */}
-        <div>
+        <div ref={softSkillsRef}>
           <h3 className="text-2xl font-bold mb-8 flex items-center gap-2">
             <Users className="h-6 w-6 text-primary" />
             Professional Skills
           </h3>
           <div className="grid md:grid-cols-2 gap-6">
-            {softSkills.map((skill, index) => (
-              <div key={index} className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <h4 className="font-semibold">{skill.name}</h4>
-                  <span className="text-sm text-primary font-medium">
-                    {getSkillLabel(skill.level)}
-                  </span>
+            {softSkills.map((skill, index) => {
+              const softIndex = index + 100; // Offset to avoid collision with tech skills
+              return (
+                <div key={index} className="space-y-2" data-index={softIndex}>
+                  <div className="flex justify-between items-center">
+                    <h4 className="font-semibold">{skill.name}</h4>
+                    <span className="text-sm text-primary font-medium">
+                      {getSkillLabel(skill.level)}
+                    </span>
+                  </div>
+                  <Progress 
+                    value={visibleSkills.has(softIndex) ? skill.level : 0} 
+                    className="h-2 transition-all duration-1000 ease-out" 
+                  />
                 </div>
-                <Progress value={skill.level} className="h-2" />
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
