@@ -3,18 +3,24 @@ import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 
 const Skills = () => {
+  const getSkillLabel = (level) => {
+    if (level >= 90) return "Expert";
+    if (level >= 80) return "Advanced";
+    if (level >= 70) return "Intermediate";
+    return "Developing";
+  };
   const technicalSkills = [
     { name: "Python (Pandas, NumPy, Matplotlib)", level: 90, icon: Code2 },
     { name: "SQL & Database Management", level: 85, icon: Database },
     { name: "Power BI & Tableau", level: 88, icon: BarChart3 },
-    { name: "Data Structures & Algorithms (Java)", level: 80, icon: Brain },
+    { name: "Data Structures & Algorithms (Java)", level: 65, icon: Brain },
   ];
 
   const softSkills = [
     { name: "Communication & Storytelling", level: 92 },
     { name: "Leadership & Team Management", level: 88 },
-    { name: "Problem Solving", level: 90 },
-    { name: "Entrepreneurial Vision", level: 85 },
+    { name: "Problem Solving", level: 80 },
+    { name: "Entrepreneurial Vision", level: 100 },
   ];
 
   const tools = [
@@ -58,9 +64,19 @@ const Skills = () => {
                     <skill.icon className="h-6 w-6 text-primary" />
                   </div>
                   <div className="flex-1">
-                    <h4 className="font-semibold mb-2">{skill.name}</h4>
+                    {/* <h4 className="font-semibold mb-2">{skill.name}</h4>
                     <Progress value={skill.level} className="h-2" />
-                    <p className="text-sm text-primary mt-1 font-medium">{skill.level}%</p>
+                    <p className="text-sm text-primary mt-1 font-medium">{skill.level}%
+                      {getSkillLabel(skill.level)}
+                    </p>  */}
+                    <div className="flex justify-between items-center mb-2">
+                      <h4 className="font-semibold">{skill.name}</h4>
+                      <span className="text-sm text-primary font-medium">
+                        {getSkillLabel(skill.level)}
+                      </span>
+                    </div>
+                    <Progress value={skill.level} className="h-2" />
+
                   </div>
                 </div>
               </Card>
@@ -94,7 +110,9 @@ const Skills = () => {
               <div key={index} className="space-y-2">
                 <div className="flex justify-between items-center">
                   <h4 className="font-semibold">{skill.name}</h4>
-                  <span className="text-sm text-primary font-medium">{skill.level}%</span>
+                  <span className="text-sm text-primary font-medium">
+                    {getSkillLabel(skill.level)}
+                  </span>
                 </div>
                 <Progress value={skill.level} className="h-2" />
               </div>

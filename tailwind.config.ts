@@ -64,6 +64,14 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        "typing": {
+          "0%": { width: "0" },
+          "100%": { width: "100%" },
+        },
+        // "blink": {
+        //   "0%, 100%": { borderColor: "transparent" },
+        //   "50%": { borderColor: "hsl(var(--primary))" }, // or "#22c55e" green
+        // },
         "accordion-down": {
           from: {
             height: "0",
@@ -118,6 +126,7 @@ export default {
         }
       },
       animation: {
+        "typing": "typing 2s steps(14) forwards",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.6s ease-out",
@@ -129,3 +138,4 @@ export default {
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+

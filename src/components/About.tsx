@@ -52,7 +52,7 @@ const About = () => {
         <Card className="p-8 md:p-12 bg-card border-border">
           <div className="space-y-6 text-lg leading-relaxed text-foreground/90">
             <p>
-              I'm a <strong className="text-primary">B.Tech Civil Engineering</strong> student at NIT Jalandhar with a passion that extends far beyond traditional engineering. My journey into <strong className="text-primary">Data Science and Data Analysis</strong> began with a simple curiosity: What insights lie hidden in data that could solve real-world problems?
+              My journey into <strong className="text-primary">Data Science and Data Analysis</strong> began with a simple curiosity: What insights lie hidden in data that could solve real-world problems?
             </p>
             <p>
               As the <strong className="text-primary">Management Coordinator for the NIT Jalandhar Entrepreneurship Cell</strong>, I organized the "Revive Failed Business" event with over 200 participants, where I learned the importance of data-driven decision-making in business success. This experience solidified my commitment to using data as a tool for innovation.

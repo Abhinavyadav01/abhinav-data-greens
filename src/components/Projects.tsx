@@ -8,12 +8,12 @@ const Projects = () => {
   const projects = [
     {
       title: "College Analyser",
-      description: "An interactive dashboard built with Streamlit helping JEE aspirants make informed decisions during counseling. Features visual college comparisons, detailed seat matrices, historical cutoff analysis, and location-based insights using maps.",
+      description: "An interactive dashboard built with Streamlit and Python helping JEE aspirants make informed decisions during counseling. Features visual college comparisons, detailed seat matrices, historical cutoff analysis, and location-based insights using maps.",
       image: collegeAnalyser,
-      technologies: ["Python", "Streamlit", "Pandas", "Plotly", "Matplotlib"],
+      technologies: ["Python", "Excel", "Streamlit", "Pandas", "Plotly", "Matplotlib"],
       highlights: [
-        "Visual comparison of 500+ engineering colleges",
-        "Interactive cutoff trends and predictions",
+        "Visual comparison of all 54 IIT/NIT colleges",
+        "Interactive plots and cutoff trends with selectboxes",
         "Location analysis with integrated maps",
         "Simplified counseling decision-making"
       ],
@@ -22,11 +22,11 @@ const Projects = () => {
     },
     {
       title: "Zepto Sales Dashboard",
-      description: "A comprehensive Power BI dashboard analyzing sales data for Zepto (grocery delivery service). Utilized Power Query for data transformation, DAX for advanced calculations, and data modeling to answer critical business questions about item performance and outlet efficiency.",
+      description: "A comprehensive Power BI dashboard analyzing sales data for Zepto (10 minutes grocery delivery service). Utilized Power Query for data transformation, DAX for advanced calculations, and data modeling to answer critical business questions about item performance and outlet efficiency.",
       image: zeptoDashboard,
       technologies: ["Power BI", "Power Query", "DAX", "Data Modeling"],
       highlights: [
-        "Analysis of item sales and fat content patterns",
+        "Analysis of item sales, rating and fat content patterns",
         "Outlet performance comparison across locations",
         "Revenue optimization insights",
         "Interactive filters for deep-dive analysis"

@@ -25,11 +25,13 @@ const Hero = () => {
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-tight">
                 Abhinav Yadav
               </h1>
-              <p className="text-2xl md:text-3xl font-bold text-gradient">A Data Analyst</p>
+              <p className="text-2xl md:text-3xl font-bold text-gradient overflow-hidden whitespace-nowrap animate-typing">
+                A Data Analyst
+              </p>
             </div>
             
             <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
-              Leveraging Python, SQL, and Power BI to transform complex data into clear, actionable business intelligence. Bridging Civil Engineering precision with Data Science innovation.
+              Leveraging Python, SQL, and Power BI to transform complex data into clear, actionable business intelligence. Driving insights with precision and innovation in Data Science.
             </p>
 
             {/* CTAs */}
