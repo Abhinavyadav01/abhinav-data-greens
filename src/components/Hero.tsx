@@ -62,24 +62,24 @@ const Hero = () => {
                 Download CV
               </Button>
             </div>
-
+            
             {/* Social Links */}
-            <div className="flex gap-5 pt-4 md:pt-4 justify-center md:justify-start">
+            <div className="flex gap-4 pt-2 md:pt-4 justify-center md:justify-start">
               <a href="https://github.com/abhinavyadav01" target="_blank" rel="noopener noreferrer" 
-                className="w-11 h-11 flex items-center justify-center rounded-full bg-secondary hover:bg-primary/10 text-muted-foreground hover:text-primary transition-all hover:scale-110">
-                <Github className="h-5 w-5" />
+                className="text-muted-foreground hover:text-primary transition-colors">
+                <Github className="h-6 w-6" />
               </a>
               <a href="https://linkedin.com/in/abhinavyadav23" target="_blank" rel="noopener noreferrer"
-                className="w-11 h-11 flex items-center justify-center rounded-full bg-secondary hover:bg-primary/10 text-muted-foreground hover:text-primary transition-all hover:scale-110">
-                <Linkedin className="h-5 w-5" />
+                className="text-muted-foreground hover:text-primary transition-colors">
+                <Linkedin className="h-6 w-6" />
               </a>
               <a href="mailto:abhinav.codes01@gmail.com"
-                className="w-11 h-11 flex items-center justify-center rounded-full bg-secondary hover:bg-primary/10 text-muted-foreground hover:text-primary transition-all hover:scale-110">
-                <Mail className="h-5 w-5" />
+                className="text-muted-foreground hover:text-primary transition-colors">
+                <Mail className="h-6 w-6" />
               </a>
               <a href="https://instagram.com/_abhinav.0523" target="_blank" rel="noopener noreferrer"
-                className="w-11 h-11 flex items-center justify-center rounded-full bg-secondary hover:bg-primary/10 text-muted-foreground hover:text-primary transition-all hover:scale-110">
-                <Instagram className="h-5 w-5" />
+                className="text-muted-foreground hover:text-primary transition-colors">
+                <Instagram className="h-6 w-6" />
               </a>
             </div>
           </div>
