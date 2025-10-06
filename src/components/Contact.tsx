@@ -72,18 +72,18 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-16 md:py-24 px-4 bg-secondary/50">
+    <section id="contact" className="py-16 md:py-24 px-4 sm:px-6 bg-secondary/50">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-12 md:mb-16 animate-fade-in">
+        <div className="text-center mb-10 md:mb-16 animate-fade-in">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4">
             Get In <span className="text-gradient">Touch</span>
           </h2>
-          <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto px-4">
+          <p className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-2">
             Have a project in mind or want to discuss data solutions? Let's connect!
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
           {/* Contact Form */}
           <Card className="p-6 md:p-8 bg-card border-border">
             <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">Send a Message</h3>

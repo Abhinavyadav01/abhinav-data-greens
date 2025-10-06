@@ -81,12 +81,13 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border animate-fade-in">
-            {navLinks.map((link) => (
+          <div className="md:hidden py-4 border-t border-border animate-slide-in-top bg-background/95 backdrop-blur-md">
+            {navLinks.map((link, index) => (
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="block w-full text-left py-3 px-4 text-sm font-medium text-foreground/80 hover:text-primary hover:bg-secondary/50 rounded-lg transition-colors"
+                className="block w-full text-left py-3.5 px-4 text-sm font-medium text-foreground/80 hover:text-primary hover:bg-secondary/50 rounded-lg transition-all duration-200 hover:translate-x-1"
+                style={{ animationDelay: `${index * 50}ms` }}
               >
                 {link.name}
               </button>
