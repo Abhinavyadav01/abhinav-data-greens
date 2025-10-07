@@ -35,7 +35,7 @@ const Hero = () => {
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-wrap gap-4 pt-4">
+            <div className="flex flex-row gap-4 pt-4">
               <Button 
                 size="lg"
                 onClick={() => scrollToSection('projects')}
