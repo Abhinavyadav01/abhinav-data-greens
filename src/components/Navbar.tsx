@@ -43,12 +43,12 @@ const Navbar = () => {
           {/* Logo */}
           <button
             onClick={() => scrollToSection("hero")}
-            className="group relative overflow-hidden text-xl font-bold text-gradient transition-all duration-300 hover:opacity-100"
+            className="group relative text-xl font-bold text-gradient transition-all duration-300 hover:opacity-100"
           >
-            <span className="block md:group-hover:opacity-0 md:group-hover:scale-0 transition-all duration-300">
+            <span className="block md:group-hover:opacity-0 transition-all duration-300">
               AY
             </span>
-            <span className="hidden md:block absolute inset-0 opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 font-cursive italic -rotate-6 origin-left whitespace-nowrap text-base">
+            <span className="hidden md:block absolute top-0 left-0 opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 font-cursive italic -rotate-6 origin-left whitespace-nowrap text-lg">
               Abhinav Yadav
             </span>
           </button>

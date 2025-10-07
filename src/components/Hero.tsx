@@ -9,7 +9,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 py-20 md:py-24">
+    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden px-4 py-16">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float" />
@@ -17,36 +17,36 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto max-w-6xl relative z-10">
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div className="grid grid-cols-2 gap-4 items-center">
           {/* Left side - Content */}
-          <div className="space-y-5 md:space-y-6 animate-slide-in-left text-center md:text-left">
-            <div className="space-y-3">
-              <p className="text-muted-foreground text-xs sm:text-sm tracking-widest uppercase">Hi, I'm</p>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight">
+          <div className="space-y-3 animate-slide-in-left text-left">
+            <div className="space-y-2">
+              <p className="text-muted-foreground text-[10px] md:text-sm tracking-widest uppercase">Hi, I'm</p>
+              <h1 className="text-2xl md:text-6xl lg:text-7xl font-black leading-tight">
                 Abhinav Yadav
               </h1>
-              <p className="text-2xl sm:text-2xl md:text-3xl font-bold text-gradient">
+              <p className="text-base md:text-3xl font-bold text-gradient">
                 A Data Analyst
               </p>
             </div>
             
-            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-lg leading-relaxed mx-auto md:mx-0 px-2 sm:px-0">
+            <p className="text-[10px] md:text-lg text-muted-foreground leading-relaxed">
               Leveraging Python, SQL, and Power BI to transform complex data into clear, actionable business intelligence. Driving insights with precision and innovation in Data Science.
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-4 md:pt-4 justify-center md:justify-start px-4 sm:px-0">
+            <div className="flex flex-col gap-2 pt-2">
               <Button 
-                size="lg" 
+                size="sm"
                 onClick={() => scrollToSection('projects')}
-                className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-8 py-6 sm:py-5 w-full sm:w-auto text-base shadow-lg hover:shadow-xl transition-all"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-4 py-2 w-full text-[10px] md:text-base shadow-lg hover:shadow-xl transition-all"
               >
                 View Projects
               </Button>
               <Button 
-                size="lg" 
+                size="sm"
                 variant="outline"
-                className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-8 py-6 sm:py-5 w-full sm:w-auto text-base transition-all"
+                className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-4 py-2 w-full text-[10px] md:text-base transition-all"
                 onClick={() => {
                   const link = document.createElement('a');
                   link.href = '/resume.pdf'; 
@@ -64,34 +64,34 @@ const Hero = () => {
             </div>
             
             {/* Social Links */}
-            <div className="flex gap-4 pt-2 md:pt-4 justify-center md:justify-start">
+            <div className="flex gap-2 md:gap-4 pt-2 justify-start">
               <a href="https://github.com/abhinavyadav01" target="_blank" rel="noopener noreferrer" 
                 className="text-muted-foreground hover:text-primary transition-colors">
-                <Github className="h-6 w-6" />
+                <Github className="h-4 md:h-6 w-4 md:w-6" />
               </a>
               <a href="https://linkedin.com/in/abhinavyadav23" target="_blank" rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors">
-                <Linkedin className="h-6 w-6" />
+                <Linkedin className="h-4 md:h-6 w-4 md:w-6" />
               </a>
               <a href="mailto:abhinav.codes01@gmail.com"
                 className="text-muted-foreground hover:text-primary transition-colors">
-                <Mail className="h-6 w-6" />
+                <Mail className="h-4 md:h-6 w-4 md:w-6" />
               </a>
               <a href="https://instagram.com/_abhinav.0523" target="_blank" rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors">
-                <Instagram className="h-6 w-6" />
+                <Instagram className="h-4 md:h-6 w-4 md:w-6" />
               </a>
             </div>
           </div>
 
           {/* Right side - Profile Image */}
-          <div className="relative animate-fade-in order-first md:order-last mb-6 md:mb-0">
-            <div className="relative w-56 sm:w-72 md:w-full max-w-md mx-auto">
+          <div className="relative animate-fade-in">
+            <div className="relative w-full max-w-[200px] md:max-w-md mx-auto">
               {/* Glow effect */}
               <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl animate-glow" />
               
               {/* Image container */}
-              <div className="relative rounded-full overflow-hidden border-4 border-primary/30 hover:cursor-pointer shadow-2xl">
+              <div className="relative rounded-full overflow-hidden border-2 md:border-4 border-primary/30 hover:cursor-pointer shadow-2xl">
                 <img 
                   src={profileImage} 
                   alt="Abhinav Yadav - Data Analyst" 
@@ -100,14 +100,17 @@ const Hero = () => {
               </div>
 
               {/* Decorative rings */}
-              <div className="absolute -inset-4 border-2 border-primary/20 rounded-full animate-pulse pointer-events-none"/>
-              <div className="absolute -inset-8 border border-primary/10 rounded-full pointer-events-none" />
+              <div className="absolute -inset-2 md:-inset-4 border md:border-2 border-primary/20 rounded-full animate-pulse pointer-events-none"/>
+              <div className="absolute -inset-4 md:-inset-8 border border-primary/10 rounded-full pointer-events-none" />
             </div>
           </div>
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <div 
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer"
+          onClick={() => scrollToSection('about')}
+        >
           <ArrowDown className="h-6 w-6 text-primary" />
         </div>
       </div>

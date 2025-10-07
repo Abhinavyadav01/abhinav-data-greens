@@ -1,15 +1,21 @@
 import { ExternalLink, Github } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 import collegeAnalyser from "@/assets/college-analyser-project.jpg";
 import zeptoDashboard from "@/assets/zepto-dashboard-project.jpg";
+import collegeAnalyserVideo from "@/assets/college-analyser-video.mp4";
+import zeptoDashboardVideo from "@/assets/zepto-dashboard-video.mp4";
 
 const Projects = () => {
+  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
+
   const projects = [
     {
       title: "College Analyser",
       description: "An interactive dashboard built with Streamlit and Python helping JEE aspirants make informed decisions during counseling. Features visual college comparisons, detailed seat matrices, historical cutoff analysis, and location-based insights using maps.",
       image: collegeAnalyser,
+      video: collegeAnalyserVideo,
       technologies: ["Python", "Excel", "Streamlit", "Pandas", "Plotly", "Matplotlib"],
       highlights: [
         "Visual comparison of all 54 IIT/NIT colleges",
@@ -24,6 +30,7 @@ const Projects = () => {
       title: "Zepto Sales Dashboard",
       description: "A comprehensive Power BI dashboard analyzing sales data for Zepto (10 minutes grocery delivery service). Utilized Power Query for data transformation, DAX for advanced calculations, and data modeling to answer critical business questions about item performance and outlet efficiency.",
       image: zeptoDashboard,
+      video: zeptoDashboardVideo,
       technologies: ["Power BI", "Power Query", "DAX", "Data Modeling"],
       highlights: [
         "Analysis of item sales, rating and fat content patterns",
@@ -52,13 +59,27 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Card key={index} className="overflow-hidden bg-card border-border card-glow">
               <div className="grid md:grid-cols-2 gap-0">
-                {/* Image */}
-                <div className="relative h-48 sm:h-64 md:h-auto overflow-hidden bg-muted">
-                  <img 
-                    src={project.image} 
-                    alt={`${project.title} preview`}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  />
+                {/* Image/Video */}
+                <div 
+                  className="relative h-48 sm:h-64 md:h-auto overflow-hidden bg-muted"
+                  onMouseEnter={() => setHoveredProject(index)}
+                  onMouseLeave={() => setHoveredProject(null)}
+                >
+                  {hoveredProject === index ? (
+                    <video 
+                      src={project.video}
+                      autoPlay
+                      loop
+                      muted
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <img 
+                      src={project.image} 
+                      alt={`${project.title} preview`}
+                      className="w-full h-full object-cover"
+                    />
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-60 md:opacity-0" />
                 </div>
 
