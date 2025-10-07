@@ -35,27 +35,23 @@ const Hero = () => {
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col gap-2 pt-2">
+            <div className="flex flex-wrap gap-4 pt-4">
               <Button 
-                size="sm"
+                size="lg"
                 onClick={() => scrollToSection('projects')}
-                className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-4 py-2 w-full text-[10px] md:text-base shadow-lg hover:shadow-xl transition-all"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold shadow-lg hover:shadow-xl transition-all"
               >
                 View Projects
               </Button>
               <Button 
-                size="sm"
+                size="lg"
                 variant="outline"
-                className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-4 py-2 w-full text-[10px] md:text-base transition-all"
+                className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold transition-all"
                 onClick={() => {
                   const link = document.createElement('a');
                   link.href = '/resume.pdf'; 
                   link.download = 'Abhinav_Yadav_CV.pdf'; 
                   link.click();
-
-                  // 5. Optional: Track the click
-                  // console.log('Resume download clicked!');
-                  // or send info to analytics (Google Analytics, etc.)
                 }}
               >
                 <Download className="mr-2 h-5 w-5" />

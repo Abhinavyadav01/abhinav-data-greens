@@ -48,7 +48,7 @@ const Navbar = () => {
             <span className="block md:group-hover:opacity-0 transition-all duration-300">
               AY
             </span>
-            <span className="hidden md:block absolute top-0 left-0 opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 font-cursive italic -rotate-6 origin-left whitespace-nowrap text-lg">
+            <span className="hidden md:block absolute top-0 left-0 opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 font-cursive text-gradient whitespace-nowrap text-lg">
               Abhinav Yadav
             </span>
           </button>
