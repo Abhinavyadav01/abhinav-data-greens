@@ -53,12 +53,19 @@ const Projects = () => {
           <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto px-4">
             Transforming complex problems into elegant data-driven solutions
           </p>
-          <div className="hidden md:flex items-center justify-center mt-8 gap-2 animate-fade-in">
-            <div className="relative">
-              <p className="text-gradient font-semibold text-lg tracking-wide animate-pulse">
+          <div className="hidden md:flex items-center justify-center mt-8 animate-fade-in">
+            <div className="relative px-8 py-4 rounded-2xl overflow-hidden">
+              {/* Liquid animated background */}
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-accent/30 to-primary/20 dark:from-primary/30 dark:via-accent/40 dark:to-primary/30 animate-[gradient_8s_ease_infinite] bg-[length:200%_200%]"></div>
+              <div className="absolute inset-0 bg-gradient-to-l from-primary/15 via-transparent to-accent/15 dark:from-primary/25 dark:via-transparent dark:to-accent/25 animate-[gradient_6s_ease-in-out_infinite_reverse] bg-[length:200%_200%]"></div>
+              
+              {/* Glass effect overlay */}
+              <div className="absolute inset-0 backdrop-blur-xl bg-background/10 dark:bg-background/5"></div>
+              
+              {/* Text content */}
+              <p className="relative z-10 font-semibold text-lg tracking-wide bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent">
                 Hover on the project image to watch video
               </p>
-              <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 rounded-lg blur opacity-30 group-hover:opacity-50 transition duration-1000"></div>
             </div>
           </div>
         </div>
