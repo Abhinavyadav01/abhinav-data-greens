@@ -53,21 +53,10 @@ const Projects = () => {
           <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto px-4">
             Transforming complex problems into elegant data-driven solutions
           </p>
-          <div className="hidden md:flex items-center justify-center mt-8 animate-fade-in">
-            <div className="relative px-8 py-4 rounded-3xl overflow-hidden">
-              {/* Liquid animated background layers */}
-              <div className="absolute inset-0 bg-gradient-to-r from-green-400/30 via-emerald-500/40 to-green-400/30 dark:from-blue-500/30 dark:via-cyan-500/40 dark:to-blue-500/30 animate-[gradient_8s_ease_infinite] bg-[length:200%_200%] blur-2xl"></div>
-              <div className="absolute inset-0 bg-gradient-to-l from-emerald-300/20 via-green-500/30 to-emerald-300/20 dark:from-cyan-400/20 dark:via-blue-400/30 dark:to-cyan-400/20 animate-[gradient_6s_ease-in-out_infinite_reverse] bg-[length:200%_200%] blur-xl"></div>
-              <div className="absolute inset-0 bg-gradient-to-br from-green-500/15 via-transparent to-emerald-500/15 dark:from-blue-400/15 dark:via-transparent dark:to-cyan-500/15 animate-[gradient_10s_ease_infinite] bg-[length:200%_200%]"></div>
-              
-              {/* Glass morphism overlay */}
-              <div className="absolute inset-0 backdrop-blur-sm bg-white/40 dark:bg-black/40 border border-green-200/50 dark:border-blue-400/50"></div>
-              
-              {/* Text content */}
-              <p className="relative z-10 font-bold text-lg tracking-wide text-green-600 dark:text-blue-400">
-                Hover on the project image to watch video
-              </p>
-            </div>
+          <div className="hidden md:flex items-center justify-center mt-6">
+            <p className="text-muted-foreground text-sm">
+              Hover on the project image to watch video
+            </p>
           </div>
         </div>
 
