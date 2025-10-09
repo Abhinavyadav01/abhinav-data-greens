@@ -53,6 +53,14 @@ const Projects = () => {
           <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto px-4">
             Transforming complex problems into elegant data-driven solutions
           </p>
+          <div className="hidden md:flex items-center justify-center mt-8 gap-2 animate-fade-in">
+            <div className="relative">
+              <p className="text-gradient font-semibold text-lg tracking-wide animate-pulse">
+                Hover on the project image to watch video
+              </p>
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 rounded-lg blur opacity-30 group-hover:opacity-50 transition duration-1000"></div>
+            </div>
+          </div>
         </div>
 
         <div className="space-y-8 md:space-y-12">
