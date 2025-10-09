@@ -54,7 +54,7 @@ const Projects = () => {
             Transforming complex problems into elegant data-driven solutions
           </p>
           <div className="hidden md:flex items-center justify-center mt-6">
-            <p className="text-muted-foreground text-sm font-cursive">
+            <p className="text-blue-600 dark:text-green-500 text-xl font-cursive">
               Hover on the project image to watch video
             </p>
           </div>
