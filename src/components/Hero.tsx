@@ -43,14 +43,11 @@ const Hero = () => {
           {/* Text Content - Mobile */}
           <div className="space-y-2">
             {/* Name section - half width */}
-            <div className="w-1/2 space-y-1">
+            <div className="w-full space-y-1">
               <p className="text-muted-foreground text-sm tracking-widest uppercase">Hi, I'm</p>
               <h1 className="text-4xl font-black leading-tight">
-                Abhinav Yadav
+                Abhinav Yadav <span className="text-xl font-bold text-gradient">- A Data Analyst</span>
               </h1>
-              <p className="text-xl font-bold text-gradient">
-                A Data Analyst
-              </p>
             </div>
             
             {/* Description - full width */}
