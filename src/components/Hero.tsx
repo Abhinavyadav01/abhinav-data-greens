@@ -21,7 +21,7 @@ const Hero = () => {
         <div className="flex flex-col md:hidden space-y-4">
           {/* Profile Image - Mobile */}
           <div className="relative animate-fade-in">
-            <div className="relative w-full max-w-[300px] mx-auto">
+            <div className="relative w-full max-w-[200px] mx-auto">
               {/* Glow effect */}
               <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl animate-glow" />
               
@@ -41,9 +41,9 @@ const Hero = () => {
           </div>
 
           {/* Text Content - Mobile */}
-          <div className="flex gap-3 items-center">
-            {/* Left side - Name */}
-            <div className="flex-shrink-0 space-y-1">
+          <div className="space-y-2">
+            {/* Name section - half width */}
+            <div className="w-1/2 space-y-1">
               <p className="text-muted-foreground text-sm tracking-widest uppercase">Hi, I'm</p>
               <h1 className="text-4xl font-black leading-tight">
                 Abhinav Yadav
@@ -53,8 +53,8 @@ const Hero = () => {
               </p>
             </div>
             
-            {/* Right side - Description */}
-            <div className="flex-1">
+            {/* Description - full width */}
+            <div className="w-full">
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Leveraging Python, SQL, and Power BI to transform complex data into clear, actionable business intelligence. Driving insights with precision and innovation in Data Science.
               </p>
@@ -90,19 +90,19 @@ const Hero = () => {
           <div className="flex gap-4 justify-start">
             <a href="https://github.com/abhinavyadav01" target="_blank" rel="noopener noreferrer" 
               className="text-muted-foreground hover:text-muted-foreground active:text-muted-foreground transition-colors">
-              <Github className="h-8 w-8" />
+              <Github className="h-6 w-6" />
             </a>
             <a href="https://linkedin.com/in/abhinavyadav23" target="_blank" rel="noopener noreferrer"
               className="text-muted-foreground hover:text-muted-foreground active:text-muted-foreground transition-colors">
-              <Linkedin className="h-8 w-8" />
+              <Linkedin className="h-6 w-6" />
             </a>
             <a href="mailto:abhinav.codes01@gmail.com"
               className="text-muted-foreground hover:text-muted-foreground active:text-muted-foreground transition-colors">
-              <Mail className="h-8 w-8" />
+              <Mail className="h-6 w-6" />
             </a>
             <a href="https://instagram.com/_abhinav.0523" target="_blank" rel="noopener noreferrer"
               className="text-muted-foreground hover:text-muted-foreground active:text-muted-foreground transition-colors">
-              <Instagram className="h-8 w-8" />
+              <Instagram className="h-6 w-6" />
             </a>
           </div>
         </div>
@@ -193,9 +193,9 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Scroll indicator */}
+        {/* Scroll indicator - hidden on mobile */}
         <div 
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer"
+          className="hidden md:block absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer"
           onClick={() => scrollToSection('about')}
         >
           <ArrowDown className="h-6 w-6 text-primary" />
