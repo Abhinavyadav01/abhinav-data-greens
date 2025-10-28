@@ -46,7 +46,7 @@ const Hero = () => {
             <div className="w-full space-y-1">
               <p className="text-muted-foreground text-sm tracking-widest uppercase">Hi, I'm</p>
               <h1 className="text-4xl font-black leading-tight">
-                Abhinav Yadav <span className="text-xl font-bold text-gradient">- A Data Analyst</span>
+                Abhinav<br/>Yadav <span className="text-xl font-bold text-gradient">A Data Analyst</span>
               </h1>
             </div>
             
