@@ -21,7 +21,7 @@ const About = () => {
         <div className="md:hidden flex items-center justify-center gap-2 mb-4">
           {activeCard === 'leadership' && (
             <>
-              <Card className="w-32 h-32 p-3 bg-card border-border card-glow transition-all">
+              <Card className="w-32 h-32 p-3 bg-card border-border transition-all duration-300 ease-in-out animate-scale-in">
                 <div className="flex flex-col items-center justify-center h-full">
                   <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
                     <Lightbulb className="h-6 w-6 text-primary" />
@@ -33,10 +33,10 @@ const About = () => {
                   </p>
                 </div>
               </Card>
-              <button onClick={() => setActiveCard('education')} className="w-12 h-12 bg-card border border-border rounded-lg flex items-center justify-center hover:bg-primary/10 transition-colors">
+              <button onClick={() => setActiveCard('education')} className="w-12 h-12 bg-card border border-border rounded-lg flex items-center justify-center transition-all duration-300 ease-in-out animate-scale-in">
                 <GraduationCap className="h-6 w-6 text-primary" />
               </button>
-              <button onClick={() => setActiveCard('vision')} className="w-12 h-12 bg-card border border-border rounded-lg flex items-center justify-center hover:bg-primary/10 transition-colors">
+              <button onClick={() => setActiveCard('vision')} className="w-12 h-12 bg-card border border-border rounded-lg flex items-center justify-center transition-all duration-300 ease-in-out animate-scale-in">
                 <Target className="h-6 w-6 text-primary" />
               </button>
             </>
@@ -44,10 +44,10 @@ const About = () => {
           
           {activeCard === 'education' && (
             <>
-              <button onClick={() => setActiveCard('leadership')} className="w-12 h-12 bg-card border border-border rounded-lg flex items-center justify-center hover:bg-primary/10 transition-colors">
+              <button onClick={() => setActiveCard('leadership')} className="w-12 h-12 bg-card border border-border rounded-lg flex items-center justify-center transition-all duration-300 ease-in-out animate-scale-in">
                 <Lightbulb className="h-6 w-6 text-primary" />
               </button>
-              <Card className="w-32 h-32 p-3 bg-card border-border card-glow transition-all">
+              <Card className="w-32 h-32 p-3 bg-card border-border transition-all duration-300 ease-in-out animate-scale-in">
                 <div className="flex flex-col items-center justify-center h-full">
                   <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
                     <GraduationCap className="h-6 w-6 text-primary" />
@@ -59,7 +59,7 @@ const About = () => {
                   </p>
                 </div>
               </Card>
-              <button onClick={() => setActiveCard('vision')} className="w-12 h-12 bg-card border border-border rounded-lg flex items-center justify-center hover:bg-primary/10 transition-colors">
+              <button onClick={() => setActiveCard('vision')} className="w-12 h-12 bg-card border border-border rounded-lg flex items-center justify-center transition-all duration-300 ease-in-out animate-scale-in">
                 <Target className="h-6 w-6 text-primary" />
               </button>
             </>
@@ -67,13 +67,13 @@ const About = () => {
           
           {activeCard === 'vision' && (
             <>
-              <button onClick={() => setActiveCard('leadership')} className="w-12 h-12 bg-card border border-border rounded-lg flex items-center justify-center hover:bg-primary/10 transition-colors">
+              <button onClick={() => setActiveCard('leadership')} className="w-12 h-12 bg-card border border-border rounded-lg flex items-center justify-center transition-all duration-300 ease-in-out animate-scale-in">
                 <Lightbulb className="h-6 w-6 text-primary" />
               </button>
-              <button onClick={() => setActiveCard('education')} className="w-12 h-12 bg-card border border-border rounded-lg flex items-center justify-center hover:bg-primary/10 transition-colors">
+              <button onClick={() => setActiveCard('education')} className="w-12 h-12 bg-card border border-border rounded-lg flex items-center justify-center transition-all duration-300 ease-in-out animate-scale-in">
                 <GraduationCap className="h-6 w-6 text-primary" />
               </button>
-              <Card className="w-32 h-32 p-3 bg-card border-border card-glow transition-all">
+              <Card className="w-32 h-32 p-3 bg-card border-border transition-all duration-300 ease-in-out animate-scale-in">
                 <div className="flex flex-col items-center justify-center h-full">
                   <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-2">
                     <Target className="h-6 w-6 text-primary" />
@@ -91,7 +91,7 @@ const About = () => {
 
         {/* Desktop/Tablet Cards */}
         <div className="hidden md:grid grid-cols-3 gap-2 md:gap-8 mb-4 md:mb-12">
-          <Card className="p-2 sm:p-6 bg-card border-border card-glow hover:scale-105 transition-transform">
+          <Card className="p-2 sm:p-6 bg-card border-border hover:scale-105 transition-transform">
             <div className="w-8 h-8 md:w-12 md:h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-2 md:mb-4 mx-auto">
               <GraduationCap className="h-4 w-4 md:h-6 md:w-6 text-primary" />
             </div>
@@ -102,7 +102,7 @@ const About = () => {
             </p>
           </Card>
 
-          <Card className="p-2 sm:p-6 bg-card border-border card-glow hover:scale-105 transition-transform">
+          <Card className="p-2 sm:p-6 bg-card border-border hover:scale-105 transition-transform">
             <div className="w-8 h-8 md:w-12 md:h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-2 md:mb-4 mx-auto">
               <Lightbulb className="h-4 w-4 md:h-6 md:w-6 text-primary" />
             </div>
@@ -113,7 +113,7 @@ const About = () => {
             </p>
           </Card>
 
-          <Card className="p-2 sm:p-6 bg-card border-border card-glow hover:scale-105 transition-transform">
+          <Card className="p-2 sm:p-6 bg-card border-border hover:scale-105 transition-transform">
             <div className="w-8 h-8 md:w-12 md:h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-2 md:mb-4 mx-auto">
               <Target className="h-4 w-4 md:h-6 md:w-6 text-primary" />
             </div>
@@ -126,7 +126,7 @@ const About = () => {
         </div>
 
         {/* About Text - Mobile without border, Desktop with Card */}
-        <div className="md:hidden space-y-2 text-[10px] leading-tight text-foreground/90 h-[180px] overflow-hidden">
+        <div className="md:hidden space-y-2 text-xs leading-tight text-foreground/90 h-[180px] overflow-hidden">
           <p>
             My journey into <strong className="text-primary">Data Science and Data Analysis</strong> began with a simple curiosity: What insights lie hidden in data that could solve real-world problems?
           </p>

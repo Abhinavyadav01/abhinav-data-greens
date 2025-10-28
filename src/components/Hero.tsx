@@ -46,7 +46,7 @@ const Hero = () => {
             <div className="w-full space-y-1">
               <p className="text-muted-foreground text-sm tracking-widest uppercase">Hi, I'm</p>
               <h1 className="text-4xl font-black leading-tight">
-                Abhinav<br/>Yadav <span className="text-xl font-bold text-gradient">A Data Analyst</span>
+                Abhinav<br/>Yadav<br/><span className="text-xl font-bold text-gradient">A Data Analyst</span>
               </h1>
             </div>
             
@@ -70,7 +70,7 @@ const Hero = () => {
             <Button 
               size="sm"
               variant="outline"
-              className="flex-1 border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground active:bg-background active:text-primary font-semibold transition-all text-xs px-3"
+              className="flex-1 border-2 border-primary text-primary font-semibold text-xs px-3"
               onClick={() => {
                 const link = document.createElement('a');
                 link.href = '/resume.pdf'; 
