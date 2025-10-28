@@ -70,7 +70,8 @@ const Hero = () => {
             <Button 
               size="sm"
               variant="outline"
-              className="flex-1 border-2 border-primary text-primary font-semibold text-xs px-3"
+              className="flex-1 border-2 border-primary text-primary font-semibold text-xs px-3 hover:bg-transparent active:bg-transparent focus:bg-transparent 
+                         hover:text-primary active:text-primary focus:text-primary focus-visible:ring-0 focus-visible:ring-offset-0"
               onClick={() => {
                 const link = document.createElement('a');
                 link.href = '/resume.pdf'; 
