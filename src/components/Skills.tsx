@@ -82,7 +82,19 @@ const Skills = () => {
             <Code2 className="h-6 w-6 text-primary" />
             Technical Stack
           </h3>
-          <div className="grid md:grid-cols-2 gap-4 md:gap-6">
+          
+          {/* Mobile: Bullet list */}
+          <ul className="md:hidden space-y-3">
+            {technicalSkills.map((skill, index) => (
+              <li key={index} className="flex items-center gap-3 text-sm" data-index={index}>
+                <skill.icon className="h-5 w-5 text-primary flex-shrink-0" />
+                <span>{skill.name}</span>
+              </li>
+            ))}
+          </ul>
+          
+          {/* Desktop: Card grid with progress bars */}
+          <div className="hidden md:grid md:grid-cols-2 gap-4 md:gap-6">
             {technicalSkills.map((skill, index) => (
               <Card key={index} className="p-4 md:p-6 bg-card border-border card-glow" data-index={index}>
                 <div className="flex items-start gap-3 md:gap-4 mb-3 md:mb-4">
@@ -128,7 +140,19 @@ const Skills = () => {
             <Users className="h-6 w-6 text-primary" />
             Professional Skills
           </h3>
-          <div className="grid md:grid-cols-2 gap-4 md:gap-6">
+          
+          {/* Mobile: Bullet list */}
+          <ul className="md:hidden space-y-3">
+            {softSkills.map((skill, index) => (
+              <li key={index} className="flex items-center gap-3 text-sm">
+                <MessageSquare className="h-5 w-5 text-primary flex-shrink-0" />
+                <span>{skill.name}</span>
+              </li>
+            ))}
+          </ul>
+          
+          {/* Desktop: Grid with progress bars */}
+          <div className="hidden md:grid md:grid-cols-2 gap-4 md:gap-6">
             {softSkills.map((skill, index) => {
               const softIndex = index + 100; // Offset to avoid collision with tech skills
               return (
